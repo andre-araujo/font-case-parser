@@ -5,10 +5,15 @@
     },
     "globals": {
         "test": true,
-        "expect": true
+        "expect": true,
+        "describe": true,
+        "it": true
     },
     "rules": {
-        "indent": [1, 4, { "SwitchCase": 1 }]
+        "linebreak-style": 0,
+        "indent": [1, 4, { "SwitchCase": 1 }],
+
+        "import/prefer-default-export": 0
     },
     "extends": "airbnb-base"
 }
