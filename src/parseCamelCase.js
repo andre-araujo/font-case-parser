@@ -1,5 +1,15 @@
 export default (phrase) => {
-    const parsedPhrase = phrase.replace(/[A-Z]/g, letter => ` ${letter}`);
+    const lowerCasePhrase =
+        phrase
+            .replace(/[A-Z]/g, letter => ` ${letter}`)
+            .toLowerCase();
 
-    return parsedPhrase;
+    const capitalizedLetter =
+        lowerCasePhrase
+            .charAt(0)
+            .toUpperCase();
+
+    const sentenceCasePhrase = capitalizedLetter + lowerCasePhrase.substring(1);
+
+    return sentenceCasePhrase;
 };
