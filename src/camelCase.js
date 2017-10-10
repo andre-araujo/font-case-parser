@@ -1,4 +1,13 @@
-export default (phrase) => {
+export const toCamelCase = (phrase) => {
+    const camelCasePhrase =
+        phrase
+            .toLowerCase()
+            .replace(/ [a-zA-Z]/g, letter => letter.trim().toUpperCase());
+
+    return camelCasePhrase;
+};
+
+export const fromCamelCase = (phrase) => {
     const lowerCasePhrase =
         phrase
             .replace(/[A-Z]/g, letter => ` ${letter}`)
@@ -13,3 +22,4 @@ export default (phrase) => {
 
     return sentenceCasePhrase;
 };
+

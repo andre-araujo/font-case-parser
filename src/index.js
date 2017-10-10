@@ -1,1 +1,1 @@
-export { default as parseCamelCase } from './parseCamelCase';
+export * from './camelCase';
