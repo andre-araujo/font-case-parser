@@ -15,14 +15,14 @@ describe('toCamelCase', () => {
 
 describe('fromCamelCase', () => {
     it('should parse one-word cammel case string to capitalized word', () => {
-        expect(fromCamelCase('text')).toEqual('Text');
+        expect(fromCamelCase('text')).toEqual('text');
     });
 
     it('should parse cammel case string to sentense phrase', () => {
-        expect(fromCamelCase('someText')).toEqual('Some text');
+        expect(fromCamelCase('someText')).toEqual('some text');
     });
 
     it('should parse long cammel case string to spaced phrase', () => {
-        expect(fromCamelCase('someLongPhraseToParse')).toEqual('Some long phrase to parse');
+        expect(fromCamelCase('someLongPhraseToParse')).toEqual('some long phrase to parse');
     });
 });
