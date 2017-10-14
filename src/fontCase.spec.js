@@ -1,4 +1,4 @@
-import fontCase from './index';
+import fontCase from './fontCase';
 
 describe('fontCase', () => {
     it('should return parsed value', () => {
