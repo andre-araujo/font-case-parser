@@ -1,6 +1,7 @@
 import {
     isKebabCase,
     isSnakeCase,
+    isCamelCase,
 } from './caseChecker';
 
 describe('isKebabCase', () => {
@@ -29,7 +30,6 @@ describe('isKebabCase', () => {
     });
 });
 
-
 describe('isSnakeCase', () => {
     it('should be falsy if there is no _', () => {
         expect(isSnakeCase('text')).toBeFalsy();
@@ -56,3 +56,24 @@ describe('isSnakeCase', () => {
     });
 });
 
+describe('isCamelCase', () => {
+    it('should be falsy if there is no uppercase letter', () => {
+        expect(isCamelCase('text')).toBeFalsy();
+    });
+
+    it('should be falsy if starts with uppercase letter', () => {
+        expect(isCamelCase('Text')).toBeFalsy();
+    });
+
+    it('should be falsy if ends and starts with uppercase letter', () => {
+        expect(isCamelCase('TexT')).toBeFalsy();
+    });
+
+    it('should be falsy if there a space between letters', () => {
+        expect(isCamelCase('textWw wAwww')).toBeFalsy();
+    });
+
+    it('should be truthy if there is uppercase letters', () => {
+        expect(isCamelCase('camelCaseText')).toBeTruthy();
+    });
+});
