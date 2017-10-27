@@ -20,35 +20,6 @@ const convertedString = toKebabCase(someString);
 // some-text-to-convert
 ```
 
-### Chaining Conversion Methods
-
-You can chain any conversion method using `font-case` default function, getting converted value with `value()` method.
-
-By doing so, you can convert any font case to another directly or create another font case as below.
-
-```javascript
-import fontCase from 'font-case';
-
-const someString = 'some text to convert';
-
-const pascalCase =
-    fontCase(someString)
-        .toCamelCase()
-        .capitalize()
-        .value();
-
-// SomeTextToConvert
-
-const anotherString = 'some-text-to-convert';
-
-const snakeCase =
-    fontCase(someString)
-        .toSnakeCase()
-        .value();
-
-// some_text_to_convert
-```
-
 ## API Reference
 
 | Method | Description |
